@@ -1,0 +1,118 @@
+$font-family-sans-serif: 'Circular Std', sans-serif !default;
+$f-medium: 'Circular Std Medium';
+$gray-900: #353535 !default;
+$gray-200: #EDEDED !default;
+$white:#fff !default;
+$black:#000 !default;
+$primary:$black !default;
+$secondary:#F1F1F1 !default;
+$info: #1C6191 !default;
+$muted:#858C97 !default;
+$light: #F5F4F7 !default;
+$purple:#6E6EE5 !default;
+$small-font-size: 12px !default;
+$input-border-color: $gray-200 !default;
+$form-label-margin-bottom: 0rem !default;
+$form-label-font-size: 12px !default;
+$form-label-color: $muted !default;
+$form-floating-label-opacity: 1 !default;
+$input-bg: $light !default;
+$input-group-addon-bg: $light !default;
+$input-group-addon-border-color: $gray-200 !default;
+$dark-gradient: $gray-900, $primary;
+$border-radius: 0px !default;
+$border-radius-sm: 9px !default;
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-lg: 32px !default;
+$input-btn-padding-y-lg: 0.88rem !default;
+$input-btn-padding-x-lg: 3.44rem !default;
+$input-btn-font-size-lg: 1rem !default;
+$input-btn-focus-box-shadow: none !important;
+$form-check-label-color: rgba($primary, 0.46) !default;
+$form-check-margin-bottom:0.065rem !default;
+$form-check-input-border:  1px solid rgba(#7D7D7D, 0.29)!default;
+$component-active-color: $purple !default;
+$component-active-bg: $purple !default;
+$form-check-input-checked-color:  $component-active-color !default;
+$form-check-input-checked-bg-color: $component-active-bg !default;
+$enable-negative-margins: true;
+$container-max-widths: (
+  sm: 470px,
+  md: 540px,
+  lg: 540px,
+  xl: 540px,
+  xxl: 540px
+) !default;
+@mixin dark-gradient($direction, $dark-gradient) {
+      background: -webkit-linear-gradient($direction, $dark-gradient);
+      background: -moz-linear-gradient($direction, $dark-gradient);
+      background: -o-linear-gradient($direction, $dark-gradient);
+      background: linear-gradient($direction, $dark-gradient);
+}
+
+
+@import "font.scss";
+@import "bootstrap/bootstrap.scss";
+
+
+body,
+html {
+      height: 100%;
+      background-color: $secondary;
+}
+
+.bg-dark{
+    @include dark-gradient(to right, $dark-gradient);
+}
+
+
+.form-floating{
+     margin-bottom: 12px !important;
+    >label{
+        color:$muted;
+        font-size: 12px !important;
+          }
+
+    &::placeholder {
+      color: $muted;
+    }
+}
+
+.fw-medium{
+      font-family: $f-medium;
+}
+
+.form-check-input{
+      width: 20px;
+      height: 20px;
+      margin-right: 0.75rem;
+}
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba($black,0.3);
+	background-color: $gray-200;
+}
+
+*::-webkit-scrollbar
+{
+	width: 5px;
+	height: 5px;
+	background-color: $gray-200;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: $black;
+	border: 2px solid $muted;
+}
+
+
+
+// media queries //
+@media (max-width:600px){
+          .btn-lg{
+            padding: 0.86rem 1rem;
+      }         
+}
+
